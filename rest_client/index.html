@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello jQuery</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.min.js"></script>
+    <script src="comsumer.js"></script>
+</head>
+
+<body>
+    <div class="tab-panels--tab-content">
+        <div class="_demo--container">
+            <h2 class="base--h2 use--header">Try the service</h2>
+            <div>Choose a sample image or upload your own image to try out Visual Recognition.</div>
+            <form id="use--fileupload" data-upload-template-id="template-upload-use" class="use--form use--dropzone hideload" style="opacity: 1;"><input id="classifier_id" type="hidden" name="classifier_id" value="">
+                <div class="use--example-images use--example-images_default"><input id="use--image0_default" type="radio" name="use--example-images" value="someImage" class="use--example-radio">
+                    <div class="use--dropzone square" style="height: 200px; width: 1000px;"><label for="use--file" class="use--file-input-button base--button"><div class="use--file-input-button-big-plus">+</div><div class="use--file-input-button-text"><span class="base--a">Select</span> or drag</div></label><input id="use--file" type="file" name="images_file" accept="image/*" title="Choose an image to upload" class="use--file-input"></div>
+                </div>
+                <div class="use--url">
+                    <div class="use--invalid-url display-none" style="display: none;">Invalid URL</div>
+                    <div class="use--invalid-image-url display-none" style="display: none;">The URL must end with .JPG, .GIF, or .PNG.</div><input type="text" placeholder="Or paste an image URL" name="url" class="use--url-input base--input"><input type="hidden" name="image_data" class="use--image-data-input base--input"></div>
+            </form>
+            <div class="loading use--loading display-none" style="display: none;">
+                <div class="loader-container"><svg viewBox="25 25 50 50" class="loader"><circle cx="50" cy="50" r="20" class="loader__path"></circle></svg></div>
+                <p class="base--p use--loading-message loading--message">Watson is classifying the image to determine a match...</p>
+            </div>
+            <div class="error use--error display-none" style="display: none;"><img src="./Visual Recognition Demo_files/alert.svg" class="use--error-image error--image">
+                <p class="base--p use--error-message error--message">Visual Recognition is not available right now...</p>
+            </div>
+            <div class="use--output display-none" style="display: none;">
+                <h2 class="base--h2 use--output-header">Watson sees...</h2>
+                <div class="use--output-row">
+                    <div class="use--output-image-container"><img class="use--output-image"></div>
+                    <div id="box" class="boxes"></div>
+                    <div class="use--output-data"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="result">
+
+    </div>
+</body>
+
+</html>
